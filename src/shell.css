@@ -1,0 +1,23 @@
+.builder-shell { color: #182b27; background: #f5f7f5; font: 16px/1.5 system-ui, sans-serif; max-width: 1440px; margin: auto; padding: 24px; box-sizing: border-box; }
+.builder-shell *, .builder-shell *::before, .builder-shell *::after { box-sizing: border-box; }
+.builder-shell [hidden] { display: none !important; }
+.builder-shell h1 { font-size: 1.6rem; margin: 0 0 16px; }
+.builder-shell h2 { font-size: 1.1rem; margin: 0 0 12px; }
+.builder-shell nav, .builder-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.builder-shell button, .builder-shell select, .builder-shell textarea { font: inherit; max-width: 100%; border: 1px solid #9baea7; border-radius: 6px; background: #fff; color: #182b27; padding: 10px 12px; }
+.builder-shell button { cursor: pointer; min-height: 44px; }
+.builder-shell button[aria-pressed="true"], .builder-shell [data-ui="save"] { background: #184f3d; color: #fff; border-color: #184f3d; }
+.builder-shell button:disabled { opacity: .55; cursor: not-allowed; }
+.builder-shell :focus-visible { outline: 3px solid #b26d13; outline-offset: 2px; }
+.builder-shell label { display: block; }
+.builder-shell textarea { display: block; width: 100%; resize: vertical; margin-top: 8px; min-height: 100px; }
+.builder-shell [data-ui="source"] { min-height: 360px; tab-size: 2; font: 14px/1.6 ui-monospace, monospace; white-space: pre; overflow: auto; }
+.builder-columns { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+.builder-shell section { min-width: 0; background: #fff; border: 1px solid #d4dfd9; border-radius: 10px; padding: 16px; margin: 16px 0; }
+.builder-shell p, .builder-shell td, .builder-shell li { overflow-wrap: anywhere; }
+.builder-shell [data-ui="error"] { color: #9b2020; }
+.builder-shell [data-ui="confirmation"] { border: 2px solid #b26d13; }
+.builder-shell iframe { width: 100%; border: 1px solid #d4dfd9; background: #fff; }
+.builder-shell table { width: 100%; table-layout: fixed; border-collapse: collapse; text-align: left; }
+.builder-shell th, .builder-shell td { padding: 8px; border-bottom: 1px solid #d4dfd9; vertical-align: top; }
+@media (max-width: 700px) { .builder-shell { padding: 12px; } .builder-columns { grid-template-columns: minmax(0, 1fr); gap: 0; } .builder-shell [data-ui="source"] { min-height: 240px; } .builder-shell section { padding: 12px; } }

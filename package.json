@@ -1,0 +1,31 @@
+{
+  "name": "@mgkcloud/multiplayer-builder",
+  "version": "0.1.0-alpha.1",
+  "description": "Generic adapter-driven multiplayer source editor contracts, Node host and isolated browser shell",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "exports": {
+    ".": "./src/contracts.mjs",
+    "./contracts": "./src/contracts.mjs",
+    "./host": "./src/host.mjs",
+    "./security": "./src/security.mjs",
+    "./revision-store": "./src/revision-store.mjs",
+    "./event-reducer": "./src/event-reducer.mjs",
+    "./preview": "./src/preview.mjs",
+    "./shell": "./src/shell.mjs",
+    "./styles": "./src/shell.css"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "test:contracts": "node --test test/contracts.test.mjs",
+    "test:browser": "node --input-type=module -e \"if (!process.env.CONTRACT_BROWSER_MODULE || !process.env.CONTRACT_BROWSER_BINARY) throw new Error('Set CONTRACT_BROWSER_MODULE and CONTRACT_BROWSER_BINARY')\" && node --test test/contracts.test.mjs test/preview.test.mjs test/shell.test.mjs",
+    "check": "node --check src/contracts.mjs && node --check src/host.mjs && node --check src/security.mjs && node --check src/revision-store.mjs && node --check src/event-reducer.mjs && node --check src/preview.mjs && node --check src/shell.mjs"
+  },
+  "dependencies": {
+    "@noble/hashes": "1.8.0"
+  }
+}
